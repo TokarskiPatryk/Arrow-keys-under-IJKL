@@ -1,7 +1,7 @@
 # Arrow-keys-under-IJKL
 
 
-This AHK script remaps:
+This AHK script adds mapping:
   - Arrow keys to ALT + I / J / K / L
   - PgUp to ALT + U
   - PgUp to ALT + O
