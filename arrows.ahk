@@ -28,6 +28,11 @@
 		
 	<!<^i::Send ^{UP}     ; i 	CTRL + UP    (Cursor up per word)
 	<!<^k::Send ^{DOWN}   ; k     	CTRL + DOWN (Cursor down per word)
+	
+	; WIN + ALT Keypress Implied for all below
+		
+	<!#i::Send #{DOWN}   ; i WIN + DOWN  (Minimize window)
+	<!#k::Send #{UP}     ; k WIN + UP  (Maximize window)	
                 
         ; SHIFT + ALT Keypress Implied for all below
         
