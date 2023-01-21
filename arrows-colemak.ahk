@@ -60,9 +60,13 @@
         
         +<^u::Send +^{UP}
         +<^e::Send +^{DOWN}
+	
+	; navigation will work after clicking alt+appskey
+	<!AppsKey::Send {AppsKey}
 		
 		; PrtSc -> AppsKey(context menu)
 		;PrintScreen::Send {AppsKey}
+		
 		
 		; L and Y to PgUp and PgDown
 		!l::Send {PgUp}
