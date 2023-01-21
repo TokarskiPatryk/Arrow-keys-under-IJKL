@@ -9,70 +9,70 @@
 		; lalt <! instead of !
 		;lctrl <^ instead of ^
 		
-        <!u::Send {UP}       ; u UP          (Cursor up line)
-        <!e::Send {DOWN}     ; e DOWN            (Cursor down line)
+        <!i::Send {UP}       ; i UP          (Cursor up line)
+        <!k::Send {DOWN}     ; k DOWN            (Cursor down line)
         
-        <!n::Send {LEFT}     	; n LEFT        (Cursor left one character)
-        <!<^>!n::Send !{LEFT}   ; n ALT + LEFT  (page back)
-        <!i::Send {RIGHT}    	; i RIGHT       (Cursor right one character)
-        <!<^>!i::Send !{RIGHT}  ; i ALT + RIGHT (page forward)
+        <!j::Send {LEFT}     ; j LEFT        (Cursor left one character)
+        <!l::Send {RIGHT}    ; l RIGHT       (Cursor right one character)
         
-        <!h::Send {HOME}     ; h     HOME (Cursor to beginning of line)
-        <!o::Send {END}      ; o 	 END  (Cursor to end of line)
+        <!h::Send {HOME}     ; h     	ALT + RIGHT (Cursor to beginning of line)
+        <!;::Send {END}      ; ; 	ALT + LEFT  (Cursor to end of line)
         
-        <!<^h::Send ^{HOME}    ; h  CTRL + HOME    (Cursor to beginning of document)
-        <!<^o::Send ^{END}     ; o 	CTRL + END (Cursor to end of document)
+        <!<^h::Send ^{HOME}    ; h     	CTRL + HOME    (Cursor to beginning of document)
+        <!<^;::Send ^{END}     ; ; 	CTRL + END (Cursor to end of document)
         
         ; CTRL + ALT Keypress Implied for all below
         
-        <!<^n::Send ^{LEFT}   ; n     CTRL + LEFT (Cursor left per word)
-        <!<^i::Send ^{RIGHT}  ; i 	CTRL + RIGHT    (Cursor right per word)
+        <!<^j::Send ^{LEFT}   ; j     	CTRL + LEFT (Cursor left per word)
+        <!<^l::Send ^{RIGHT}  ; l 	CTRL + RIGHT    (Cursor right per word)
 		
-		<!<^u::Send ^{UP}  	; u 	CTRL + UP    (Cursor up per word)
-		<!<^e::Send ^{DOWN}   ; e     CTRL + DOWN (Cursor down per word)
+	<!<^i::Send ^{UP}     ; i 	CTRL + UP    (Cursor up per word)
+	<!<^k::Send ^{DOWN}   ; k     	CTRL + DOWN (Cursor down per word)
+	
+	; WIN + ALT Keypress Implied for all below
+		
+	<!#i::Send #{DOWN}   ; i WIN + DOWN  (Minimize window)
+	<!#k::Send #{UP}     ; k WIN + UP  (Maximize window)	
                 
         ; SHIFT + ALT Keypress Implied for all below
         
-        <!+u::Send +{UP}     ; u SHIFT + UP  (Highlight per line)
-        <!+e::Send +{DOWN}   ; e SHIFT + DOWN    (Highlight per line)
+        <!+i::Send +{UP}     ; i 	SHIFT + UP  (Highlight per line)
+        <!+k::Send +{DOWN}   ; k 	SHIFT + DOWN    (Highlight per line)
         
-        <!+n::Send +{LEFT}   ; n SHIFT + LEFT    (Highlight per character)
-        <!+i::Send +{RIGHT}  ; i SHIFT + RIGHT   (Highlight per character)
+        <!+j::Send +{LEFT}   ; j 	SHIFT + LEFT    (Highlight per character)
+        <!+l::Send +{RIGHT}  ; l 	SHIFT + RIGHT   (Highlight per character)
         
-        <!+h::Send +{HOME}   ; h SHIFT + ALT + LEFT  (Highlight to beginning of line)
-        <!+o::Send +{END}    ; o SHIFT + ALT + RIGHT (Hightlight to end of line)
+        <!+h::Send +{HOME}   ; h 	SHIFT + ALT + LEFT  (Highlight to beginning of line)
+        <!+;::Send +{END}    ; ; 	SHIFT + ALT + RIGHT (Hightlight to end of line)
         
-        <!+<^h::Send ^+{HOME}  ; h SHIFT + CTRL + HOME (Highlight to beggininng of document)
-        <!+<^o::Send ^+{END}   ; o SHIFT + CTRL + END  (Hightlight to end of document)
+        <!+<^h::Send ^+{HOME}  ; h 	SHIFT + CTRL + HOME (Highlight to beggininng of document)
+        <!+<^;::Send ^+{END}   ; ; 	SHIFT + CTRL + END  (Hightlight to end of document)
         
         ; SHIFT + CTRL + ALT Keypress Implied for all below
         
-        <!+<^n::Send +^{LEFT}     ; n SHIFT + CTRL + LEFT (Highlight per word)
-        <!+<^i::Send +^{RIGHT}    ; i SHIFT + CTRL + RIGHT    (Hightlight per word)
+        <!+<^j::Send +^{LEFT}   ; j 	SHIFT + CTRL + LEFT (Highlight per word)
+        <!+<^l::Send +^{RIGHT}  ; l 	SHIFT + CTRL + RIGHT    (Hightlight per word)
 		
-		<!+<^u::Send +^{UP}     	; u SHIFT + CTRL + UP (?)
-        <!+<^e::Send +^{DOWN}    	; e SHIFT + CTRL + DOWN    (?)
-    ;d    
-        ;!+^u::Send +!{UP}   	; u SHIFT + ALT + UP    (Multiply cursor up)
-        ;!+^e::Send +!{DOWN} 	; e SHIFT + ALT + DOWN  (Multiply cursor down)
-        
+	<!+<^i::Send +^{UP}     ; i 	SHIFT + CTRL + UP 
+        <!+<^k::Send +^{DOWN}   ; k 	SHIFT + CTRL + DOWN
+
         ; CTRL + SHIFT Keypress Implied for all below
         
-        +<^u::Send +^{UP}
-        +<^e::Send +^{DOWN}
+        +<^i::Send +^{UP}
+        +<^k::Send +^{DOWN}
 		
 		; PrtSc -> AppsKey(context menu)
 		;PrintScreen::Send {AppsKey}
 		
-		; L and Y to PgUp and PgDown
-		!l::Send {PgUp}
-		!y::Send {PgDn}
+	; U and O to PgUp and PgDown
+	!u::Send {PgUp}
+	!o::Send {PgDn}
 		
-		;HOME -> pause/play track
-		HOME::Send {Media_Play_Pause}
+	;HOME -> pause/play track
+	HOME::Send {Media_Play_Pause}
 		
-		;END -> next track
-		END::Send {Media_Next}
+	;END -> next track
+	END::Send {Media_Next}
 		
-		; ; -> delete
-		!;::Send {Delete}	
+	; p -> Delete
+	!p::Send {Delete}	
