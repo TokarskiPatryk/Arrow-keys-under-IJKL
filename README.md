@@ -1,7 +1,7 @@
 # Arrow-keys-under-IJKL
 
 
-This AHK script adds mapping:
+This AHK script adds mapping (on querty layout):
   - Arrow keys to ALT + I / J / K / L
   - PgUp to ALT + U
   - PgUp to ALT + O
