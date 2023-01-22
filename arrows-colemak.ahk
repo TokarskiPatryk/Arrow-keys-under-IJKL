@@ -30,7 +30,15 @@
 		
 		<!<^u::Send ^{UP}  	; u 	CTRL + UP    (Cursor up per word)
 		<!<^e::Send ^{DOWN}   ; e     CTRL + DOWN (Cursor down per word)
-                
+		
+		; ctrl + pgup/pgdown
+		<!<^l::Send ^{PgUp}
+		<!<^y::Send ^{PgDn}
+		
+		; ctrl + shift + pgup/pgdown
+		<!+<^l::Send ^+{PgUp}
+		<!+<^y::Send ^+{PgDn}
+          
         ; SHIFT + ALT Keypress Implied for all below
         
         <!+u::Send +{UP}     ; u SHIFT + UP  (Highlight per line)
@@ -60,13 +68,13 @@
         
         +<^u::Send +^{UP}
         +<^e::Send +^{DOWN}
-	
-	; navigation will work after clicking alt+appskey
-	<!AppsKey::Send {AppsKey}
 		
 		; PrtSc -> AppsKey(context menu)
 		;PrintScreen::Send {AppsKey}
 		
+		
+		; navigation will work after clicking alt+appskey
+		<!AppsKey::Send {AppsKey}
 		
 		; L and Y to PgUp and PgDown
 		!l::Send {PgUp}
