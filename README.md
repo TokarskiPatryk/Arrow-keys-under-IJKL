@@ -1,6 +1,10 @@
 # :computer: Arrow-keys-under-IJKL
 
-This AutoHotKey (AHK) script supercharges your keyboard navigation! 🚀 It cleverly maps keys to arrow keys and offers other handy functions. Plus, it supports both QWERTY and Colemak layouts for a personalized experience.
+This AutoHotKey (AHK) script supercharges your keyboard navigation! 🚀 It maps alt+(i/j/k/l) keys to arrow keys and offers other handy functions. Plus, it supports both QWERTY and Colemak layouts for a personalized experience.
+
+ You can download AutoHotkey from the official website: [AutoHotkey Official Website](https://www.autohotkey.com/)
+
+**Note:** These scripts are designed to work with **AutoHotkey version 1.1**, so make sure you have this version installed to run the scripts effectively.
 
 ## QWERTY Layout
 **For QWERTY Layout, use the `arrows.ahk` file.** 📂
