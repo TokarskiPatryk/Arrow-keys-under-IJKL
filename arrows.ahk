@@ -1,78 +1,85 @@
-        ; #Warn  ; Enable warnings to assist with detecting common errors.
-        SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
-        SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
-        
-        ; AHK Command       ; key   = Effect        (Description)
-        
-        ; ALT Keypress Implied for all below
-        
-		; lalt <! instead of !
-		;lctrl <^ instead of ^
-		
-        <!i::Send {UP}       ; i UP          (Cursor up line)
-        <!k::Send {DOWN}     ; k DOWN            (Cursor down line)
-        
-        <!j::Send {LEFT}     ; j LEFT        (Cursor left one character)
-        <!l::Send {RIGHT}    ; l RIGHT       (Cursor right one character)
-        
-        <!h::Send {HOME}     ; h     	ALT + RIGHT (Cursor to beginning of line)
-        <!;::Send {END}      ; ; 	ALT + LEFT  (Cursor to end of line)
-        
-        <!<^h::Send ^{HOME}    ; h     	CTRL + HOME    (Cursor to beginning of document)
-        <!<^;::Send ^{END}     ; ; 	CTRL + END (Cursor to end of document)
-        
-        ; CTRL + ALT Keypress Implied for all below
-        
-        <!<^j::Send ^{LEFT}   ; j     	CTRL + LEFT (Cursor left per word)
-        <!<^l::Send ^{RIGHT}  ; l 	CTRL + RIGHT    (Cursor right per word)
-		
-	<!<^i::Send ^{UP}     ; i 	CTRL + UP    (Cursor up per word)
-	<!<^k::Send ^{DOWN}   ; k     	CTRL + DOWN (Cursor down per word)
-	
-	; WIN + ALT Keypress Implied for all below
-		
-	<!#i::Send #{DOWN}   ; i WIN + DOWN  (Minimize window)
-	<!#k::Send #{UP}     ; k WIN + UP  (Maximize window)	
-                
-        ; SHIFT + ALT Keypress Implied for all below
-        
-        <!+i::Send +{UP}     ; i 	SHIFT + UP  (Highlight per line)
-        <!+k::Send +{DOWN}   ; k 	SHIFT + DOWN    (Highlight per line)
-        
-        <!+j::Send +{LEFT}   ; j 	SHIFT + LEFT    (Highlight per character)
-        <!+l::Send +{RIGHT}  ; l 	SHIFT + RIGHT   (Highlight per character)
-        
-        <!+h::Send +{HOME}   ; h 	SHIFT + ALT + LEFT  (Highlight to beginning of line)
-        <!+;::Send +{END}    ; ; 	SHIFT + ALT + RIGHT (Hightlight to end of line)
-        
-        <!+<^h::Send ^+{HOME}  ; h 	SHIFT + CTRL + HOME (Highlight to beggininng of document)
-        <!+<^;::Send ^+{END}   ; ; 	SHIFT + CTRL + END  (Hightlight to end of document)
-        
-        ; SHIFT + CTRL + ALT Keypress Implied for all below
-        
-        <!+<^j::Send +^{LEFT}   ; j 	SHIFT + CTRL + LEFT (Highlight per word)
-        <!+<^l::Send +^{RIGHT}  ; l 	SHIFT + CTRL + RIGHT    (Hightlight per word)
-		
-	<!+<^i::Send +^{UP}     ; i 	SHIFT + CTRL + UP 
-        <!+<^k::Send +^{DOWN}   ; k 	SHIFT + CTRL + DOWN
+; Recommended settings
+#Warn
+SendMode Input
+SetWorkingDir %A_ScriptDir%
 
-        ; CTRL + SHIFT Keypress Implied for all below
-        
-        +<^i::Send +^{UP}
-        +<^k::Send +^{DOWN}
-		
-		; PrtSc -> AppsKey(context menu)
-		;PrintScreen::Send {AppsKey}
-		
-	; U and O to PgUp and PgDown
-	!u::Send {PgUp}
-	!o::Send {PgDn}
-		
-	;HOME -> pause/play track
-	HOME::Send {Media_Play_Pause}
-		
-	;END -> next track
-	END::Send {Media_Next}
-		
-	; p -> Delete
-	!p::Send {Delete}	
+; Define key combinations and their actions
+; Alt Key (<!) Implied for all below
+
+; Cursor navigation
+<!i::Send {UP}         ; Alt+i: Move cursor up one line
+<!k::Send {DOWN}       ; Alt+k: Move cursor down one line
+
+; Character navigation
+<!j::Send {LEFT}       ; Alt+j: Move cursor left one character
+<!l::Send {RIGHT}      ; Alt+l: Move cursor right one character
+
+; Line navigation
+<!h::Send {HOME}       ; Alt+h: Move cursor to beginning of line
+<!;::Send {END}        ; Alt+;: Move cursor to end of line
+
+; Document navigation
+<!<^h::Send ^{HOME}    ; Alt+Ctrl+h: Move cursor to beginning of document
+<!<^;::Send ^{END}     ; Alt+Ctrl+;: Move cursor to end of document
+
+; Word navigation
+<!<^j::Send ^{LEFT}    ; Alt+Ctrl+j: Move cursor left per word
+<!<^l::Send ^{RIGHT}   ; Alt+Ctrl+l: Move cursor right per word
+
+; Cursor navigation per word
+<!<^i::Send ^{UP}       ; Alt+Ctrl+i: Move cursor up per word
+<!<^k::Send ^{DOWN}     ; Alt+Ctrl+k: Move cursor down per word
+
+; Window management (WIN + ALT)
+<!#i::Send #{DOWN}     ; Alt+Win+i: Minimize window
+<!#k::Send #{UP}       ; Alt+Win+k: Maximize window
+
+; Line highlighting
+<!+i::Send +{UP}        ; Alt+Shift+i: Highlight per line (up)
+<!+k::Send +{DOWN}      ; Alt+Shift+k: Highlight per line (down)
+
+; Character highlighting
+<!+j::Send +{LEFT}      ; Alt+Shift+j: Highlight per character (left)
+<!+l::Send +{RIGHT}     ; Alt+Shift+l: Highlight per character (right)
+
+; Line highlighting to beginning/end
+<!+h::Send +{HOME}      ; Alt+Shift+h: Highlight to beginning of line
+<!+;::Send +{END}       ; Alt+Shift+;: Highlight to end of line
+
+; Document highlighting to beginning/end
+<!+<^h::Send ^+{HOME}   ; Alt+Ctrl+Shift+h: Highlight to beginning of document
+<!+<^;::Send ^+{END}    ; Alt+Ctrl+Shift+;: Highlight to end of document
+
+; Word highlighting
+<!+<^j::Send +^{LEFT}  ; Alt+Ctrl+Shift+j: Highlight per word (left)
+<!+<^l::Send +^{RIGHT} ; Alt+Ctrl+Shift+l: Highlight per word (right)
+
+; Cursor navigation per word highlighting
+<!+<^i::Send +^{UP}     ; Alt+Ctrl+Shift+i: Highlight per word (up)
+<!+<^k::Send +^{DOWN}   ; Alt+Ctrl+Shift+k: Highlight per word (down)
+
+; Cursor navigation per word highlighting
+<!+<^i::Send +^{UP}     ; Alt+Ctrl+Shift+i: Highlight per word (up)
+<!+<^k::Send +^{DOWN}   ; Alt+Ctrl+Shift+k: Highlight per word (down)
+
+; Ctrl + Shift Keypress Implied for all below
++<^i::Send +^{UP}       ; Ctrl+Shift+i: Highlight per word (up)
++<^k::Send +^{DOWN}     ; Ctrl+Shift+k: Highlight per word (down)
+
+; Other shortcuts
+
+; PrtSc -> AppsKey (context menu)
+;PrintScreen::Send {AppsKey}
+
+; Map U and O to PgUp and PgDn
+!u::Send {PgUp}
+!o::Send {PgDn}
+
+; HOME -> pause/play track
+HOME::Send {Media_Play_Pause}
+
+; END -> next track
+END::Send {Media_Next}
+
+; p -> Delete
+!p::Send {Delete}
