@@ -58,14 +58,6 @@ SetWorkingDir %A_ScriptDir%
 <!+<^i::Send +^{UP}     ; Alt+Ctrl+Shift+i: Highlight per word (up)
 <!+<^k::Send +^{DOWN}   ; Alt+Ctrl+Shift+k: Highlight per word (down)
 
-; Cursor navigation per word highlighting
-<!+<^i::Send +^{UP}     ; Alt+Ctrl+Shift+i: Highlight per word (up)
-<!+<^k::Send +^{DOWN}   ; Alt+Ctrl+Shift+k: Highlight per word (down)
-
-; Ctrl + Shift Keypress Implied for all below
-+<^i::Send +^{UP}       ; Ctrl+Shift+i: Highlight per word (up)
-+<^k::Send +^{DOWN}     ; Ctrl+Shift+k: Highlight per word (down)
-
 ; Other shortcuts
 
 ; PrtSc -> AppsKey (context menu)
